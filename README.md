@@ -1,7 +1,7 @@
 # ESP32 project template
 ## Overview
 This is a template project to easily start a new project on ESP32.
-This template is based on esp-idf version 4.2.2 which is the latest stable version to this day.
+This template is based on esp-idf version 4.4.4 which is the latest stable version to this day.
 >***This section need to be updated when starting a new project***
 ## Prerequisites
  - [VSCode](https://code.visualstudio.com/download)
@@ -11,10 +11,8 @@ This template is based on esp-idf version 4.2.2 which is the latest stable versi
 ## Setting up the environment
 1. Clone this repository
     - `git clone [...]`
-2. Upade submodules
-    - `git submodule update --init -- recursive`
 3. Open VSCode, and open the repository folder you just cloned
-4. Launch the VS Code task `Run requirements`
+4. Launch the VS Code task `Setup project`. It will update all submodules and setup all required tools for ESP-IDF.
 ## Building/debugging the project
 The project come with needed VS Code tasks:
 - `Build`: build the whole project
@@ -25,4 +23,4 @@ The project come with needed VS Code tasks:
 - `Size`: get the size of the built app
 - `Erase`: erase the device flash
 - `Menu config`: launch the configuration tool
-- `Run requirements`: install all required packages needed by esp-idf
+- `Setup project`: updates submodules and install all required packages needed by esp-idf

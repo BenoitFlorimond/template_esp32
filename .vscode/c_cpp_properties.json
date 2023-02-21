@@ -1,21 +1,52 @@
 {
+    "env": {
+        "myIncludePath":[
+            "${workspaceFolder}/main/**",
+            "${workspaceFolder}/esp-idf/components/**",
+            "${workspaceFolder}/build/config",
+            "${workspaceFolder}/main/inc",
+            "${workspaceFolder}/fwk/inc",
+            "${workspaceFolder}/fwk/utils/inc",
+            "${workspaceFolder}/fwk/drivers/inc",
+            "${workspaceFolder}/fwk/hil/inc",
+            "${workspaceFolder}/fwk/apis/inc",
+            "${workspaceFolder}/fwk/services/inc"
+        ],
+        "myDefines":[
+            "_DEBUG",
+            "UNICODE",
+            "_UNICODE",
+            "__XTENSA__"
+        ]
+    },
     "configurations": [
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/esp-idf/components/",
-                "${workspaceFolder}/tools/toolchain/windows/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.4.0/include",
-                "${workspaceFolder}/tools/toolchain/windows/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.4.0/include-fixed",
-                "${workspaceFolder}/tools/toolchain/windows/xtensa-esp32-elf/xtensa-esp32-elf/include",
-                "${workspaceFolder}/build/config"
+                "${myIncludePath}",
+                "${workspaceFolder}/tools/windows/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.4.0/include",
+                "${workspaceFolder}/tools/windows/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.4.0/include-fixed",
+                "${workspaceFolder}/tools/windows/xtensa-esp32-elf/xtensa-esp32-elf/include"
             ],
             "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE",
-                "__XTENSA__"
-            ]
+                "${myDefines}"
+            ],
+            "compilerPath": "${workspaceFolder}/tools/windows/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc.exe",
+            "compileCommands": "/build/compile_commands.json"
+        },
+        {
+            "name": "Linux",
+            "includePath": [
+                "${myIncludePath}",
+                "${workspaceFolder}/tools/linux/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.4.0/include",
+                "${workspaceFolder}/tools/linux/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/8.4.0/include-fixed",
+                "${workspaceFolder}/tools/linux/xtensa-esp32-elf/xtensa-esp32-elf/include"
+            ],
+            "defines": [
+                "${myDefines}"
+            ],
+            "compilerPath": "${workspaceFolder}/tools/linux/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
+            "compileCommands": "/build/compile_commands.json"
         }
     ],
     "version": 4
