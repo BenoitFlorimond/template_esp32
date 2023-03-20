@@ -32,7 +32,7 @@
                 "${myDefines}"
             ],
             "compilerPath": "${workspaceFolder}/tools/windows/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc.exe",
-            "compileCommands": "/build/compile_commands.json"
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         },
         {
             "name": "Linux",
@@ -46,7 +46,7 @@
                 "${myDefines}"
             ],
             "compilerPath": "${workspaceFolder}/tools/linux/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
-            "compileCommands": "/build/compile_commands.json"
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }
     ],
     "version": 4
